@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.23)
+project(untitled4)
+include_directories(${CMAKE_SOURCE_DIR}/../extern/stb_image)
+link_directories(${CMAKE_SOURCE_DIR}/../extern/stb_image)
+set(CMAKE_CXX_STANDARD 14)
+set(GCC_COVERAGE_COMPILE_FLAGS "-mavx")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+set(GCC_COVERAGE_COMPILE_FLAGS "-mavx2")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+set(GCC_COVERAGE_COMPILE_FLAGS "-mfma")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
+
+add_executable(untitled4 main.cpp timer.h avs_mathfun.h)
